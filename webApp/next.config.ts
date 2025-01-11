@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       allowedOrigins: ['organic-zebra-5vr6w454749cx77.github.dev', 'localhost:3000'],
     },
   },
+  output: "standalone",
   images: {
     remotePatterns: [
       {
