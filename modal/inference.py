@@ -35,6 +35,8 @@ def serve():
 
     import fastapi
     import vllm.entrypoints.openai.api_server as api_server
+    from starlette.middleware.base import BaseHTTPMiddleware
+    from starlette.requests import Request
     from vllm.engine.arg_utils import AsyncEngineArgs
     from vllm.engine.async_llm_engine import AsyncLLMEngine
     from vllm.entrypoints.logger import RequestLogger
@@ -68,6 +70,15 @@ def serve():
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    class RequestLoggingMiddleware(BaseHTTPMiddleware):
+        async def dispatch(self, request: Request, call_next):
+            body = await request.body()
+            print(f"Request: {request.method} {request.url} - Body: {body.decode('utf-8')}")
+            response = await call_next(request)
+            return response
+
+    web_app.add_middleware(RequestLoggingMiddleware)
 
     # security: inject dependency on authed routes
     async def is_authenticated(api_key: str = fastapi.Security(http_bearer)):
