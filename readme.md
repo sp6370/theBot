@@ -39,4 +39,5 @@
 ### Acknowledgements
 
 - Vercel for the fantastic chatbot starter: [Vercel AI Chatbot](https://github.com/vercel/ai-chatbot)
+- Modal for LLM hosting: [Modal Examples](https://github.com/modal-labs/modal-examples/tree/main)
 - Dani for the original system prompt: [Dani Balcells](https://www.linkedin.com/in/danibalcells/)
