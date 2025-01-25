@@ -86,7 +86,7 @@ export async function POST(request: Request) {
         model: customModel(model.apiIdentifier),
         system: systemPrompt,
         messages: coreMessages,
-        maxSteps: 5,
+        maxSteps: 10,
         onFinish: async ({ response }) => {
           console.log('Data stream finished');
           if (session.user?.id) {
