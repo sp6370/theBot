@@ -98,7 +98,7 @@ def serve():
         model=MODELS_DIR + "/" + MODEL_NAME,
         tensor_parallel_size=N_GPU,
         gpu_memory_utilization=0.90,
-        max_model_len=8096,
+        max_model_len=16192,
         enforce_eager=False,
     )
 
