@@ -26,13 +26,13 @@ function PureSuggestedActions({ chatId, append }: SuggestedActionsProps) {
       action: 'All that YAML my eyes just glaze over it',
     },
     {
-      title: 'Netowrk policies',
+      title: 'Network policies',
       label: 'are too hard for me',
-      action: 'Netowrk policies are too hard for me',
+      action: 'Network policies are too hard for me',
     },
     {
       title: 'My cluster goes down',
-      label: `once a year during upgrades.`,
+      label: `once a year during upgrades`,
       action: `My cluster goes down once a year during upgrades`,
     },
   ];
