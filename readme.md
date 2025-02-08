@@ -1,4 +1,7 @@
-# Try the app on [funnycloud.work](https://funnycloud.work) and chat with the world’s best Kubernetes salesman!
+# World’s best Kubernetes salesman!
+
+![demo](https://github.com/user-attachments/assets/68085e80-323a-404f-961a-93c05fba6412)
+
 
 ### Hosting the web app
 - Install the dependencies with `pnpm install`
